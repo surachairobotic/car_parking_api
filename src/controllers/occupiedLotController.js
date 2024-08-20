@@ -3,6 +3,7 @@ const occupiedLotModel = require('../models/occupiedLotModel');
 // Create a new occupied lot
 const createOccupiedLot = (req, res) => {
     const lotData = req.body;
+    console.log(lotData)
     occupiedLotModel.createOccupiedLot(lotData, (err, id) => {
         if (err) return res.status(500).json({ error: err.message });
         res.status(201).json({ message: 'Occupied lot created successfully', id });

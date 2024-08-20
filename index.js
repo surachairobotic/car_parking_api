@@ -14,6 +14,10 @@ const parkingLots = [
   { id: 2, name: 'C', lot_size: 70, available: 0 }
 ];
 
+app.get('/', (req, res) => {
+  res.send('GCP App Engine!');
+});
+
 // Endpoint to get parking lots data
 app.get('/parking_lots', (req, res) => {
   // Update the available slots with random values
